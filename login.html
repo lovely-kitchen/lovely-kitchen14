@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Homepage</title>
+    <style>
+ .popup-container {
+      width: 300px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      text-align: center;
+      z-index: 1000;
+      display: block;
+    }
+    #popup-toggle {
+      display: none;
+    }
+
+   
+    #popup-toggle:checked + .popup-container {
+      display: none;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: transparent;
+      border: none;
+      font-size: 30px;
+      cursor: pointer;
+      color: #0a0a0a;
+    }
+
+    .close-btn:hover {
+      color: #333;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    label{
+        margin: 10px 0 5px;
+    }
+    input[type="text"],
+    input[type="password"]{
+        padding:10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+
+    }
+    button[type="submit"]{
+        background-color: #28a745;
+        border: none;
+        padding: 10px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button[type="submit"]:hover{
+        background-color: #218838;
+    }
+    .login-link {
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        .login-link a {
+            color: #0b0b0c;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+        .background-iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            border: none;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="Products.html" class="background-iframe"></iframe>
+
+  <input type="checkbox" id="popup-toggle">
+
+  <div class="popup-container">
+
+    <label class="close-btn" for="popup-toggle">&times;</label>
+
+                  <center>
+                  <h2>Log-in Form</h2>
+                  </center>
+                  <form>
+                      <input type="text" id="username" required>
+                      <label for="username"><center>Username:</center></label>
+                      <input type="password" id="password" name="password" required>
+                      <label for="password"><center>Password:</center></label>
+                      <button type="submit">Log-in</button>
+                      <div class="login-link">
+                        <p> <a href="register.html">Register here!</a></p>
+                    </div>
+                  </form>
+                  
+        </div>
+        </div>
+    </div>
+  </body>
+</html>

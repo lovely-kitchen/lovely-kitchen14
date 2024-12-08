@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+            font-family:cursive;
+            margin: 0px 0px 0px 0px;
+            padding: 0;
+            background-color:#ac8553;
+            
+        }
+        .container {
+            background-image: url('1483382.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: background-image 0.5 ease;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 5px 5px;
+            color: wheat;
+            text-align: center;
+            font-size: 1.5em;
+            font-style: italic;
+            text-shadow: 4px 4px 10px #852c03 ;
+            background-image: url('5cb86b8bdeb45d79294f005cb43be9a45_tn.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: background-image 0.5 ease;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+        .logo img{
+            max-width: 150px;
+            height:auto;
+            width: 200px; 
+              
+        }
+        .site-name{
+            margin:0;
+            flex-grow: 1;
+            text-align: center;
+            font-size: 12px;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #e7bd8a;
+        }
+        .nav a {
+            color: #9e5002;
+            padding: 14px 15px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .nav a:hover {
+            background-color:  #b18c66;
+        }
+        .main {
+            padding: 20px;
+            text-align: center;
+            
+            
+        }
+        .category {
+            color:  wheat;
+            font-size: 30px;
+            font-style: inherit;
+            text-shadow: 4px 4px 10px #852c03 ;
+            text-align: left;
+            margin-left: 20px;
+            padding: 0%;
+            font-family: cursive;
+            text-align: center;
+
+}
+.dropdown-btn {
+    background-color: #e7bd8a;
+    color: #9e5002;
+    font-family: cursive;
+    padding: 15px 20px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.dropdown-btn:hover {
+    background-color: #b18c66;
+}
+
+
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: #e7bd8a;
+    min-width: 100px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #9e5002;
+    padding: 5px 28px;
+    text-decoration: none;
+    display: block;
+    font-size: 11.5px;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background-color: #b18c66;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+        .footer {
+            background-image: url('5cb86b8bdeb45d79294f005cb43be9a45_tn.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: background-image 0.5 ease;
+            color:  wheat;
+            font-size: 20px;
+            text-shadow: 4px 4px 10px #852c03 ;
+            text-align: center;
+            padding: 10px 0PX;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+           
+            
+        }
+
+.names{
+    font-size: 20px;
+    text-shadow: 4px 4px 10px #9c3809 ;
+    text-align: center;
+}
+
+
+
+
+        header {
+            color: #e4e4e4;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            color: white;
+            text-shadow:
+                0 0 10px rgb(250, 234, 215),
+                0 0 20px rgb(250, 234, 215),
+                0 0 40px rgb(250, 234, 215),
+                0 0 80px rgb(250, 234, 215);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #d87a21;
+            padding: 10px;
+
+        }
+
+        nav a {
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-shadow:
+                10px rgb(204, 101, 17),
+                20px rgb(204, 101, 17),
+                40px rgb(204, 101, 17),
+                80px rgb(204, 101, 17);
+
+        }
+        .open-modal{
+        padding: 15px 13px;
+        background-color: #e7bd8a;
+        color: #9e5002;
+        text-align: center;
+        cursor: pointer;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 4px;
+        
+    }
+    .open-modal:hover{
+        background-color: #b18c66;
+    }
+    .modal{
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .modal-toggle{
+display: none;
+    }
+    .modal-toggle:checked+.modal{
+        display: block;
+    }
+    .modal-content{
+        background-color: #fefefe;
+        margin: 8% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 300px;
+        border-radius: 5px;
+        position: relative;
+    }
+    .close{
+        color:#aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .close:hover{
+        color: black;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    label{
+        margin: 10px 0 5px;
+    }
+    input[type="text"],
+    input[type="password"]{
+        padding:10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+
+    }
+    button[type="submit"]{
+        background-color: #28a745;
+        border: none;
+        padding: 10px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button[type="submit"]:hover{
+        background-color: #218838;
+    }
+    .login-link {
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        .login-link a {
+            color: #0b0b0c;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .gallery {
+            perspective: 1000px;
+        }
+
+        .gallery-container {
+            width: 450px;
+            height: 350px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate 15s infinite linear;
+            gap: 10px;
+            padding: 30px;
+        }
+
+        .gallery-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-image:nth-child(1) {
+            transform: rotateY(0deg);
+        }
+
+        .gallery-image:nth-child(2) {
+            transform: rotateY(90deg);
+        }
+
+        .gallery-image:nth-child(3) {
+            transform: rotateY(180deg);
+        }
+
+        .gallery-image:nth-child(4) {
+            transform: rotateY(270deg);
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .thumbnail-gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+            margin-left: 50px;
+            
+        }
+
+        .thumbnail {
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            width: 200px;
+            height: 205px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            display: block;
+
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+
+        .description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+            font-size: 15px;
+            padding: 1px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .thumbnail:hover .description {
+            opacity: 1;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="Screenshot 2024-11-24 152846.png" alt="logo">
+                </div>
+            <h1>Lovely Kitchen</h1>
+            </div>
+        <div class="nav">
+            <a href="Products.html">Home</a>
+            <a href="my products.html">Products</a>
+            <div class="dropdown">
+                <button class="dropdown-btn">Categories</button>
+                <div class="dropdown-content">
+                    <a href="c1.html">Scoop Ladle</a>
+                    <a href="c2.html">Frying Pan</a>
+                    <a href="c3.html">Plate</a>
+                    <a href="c4.html">Bowl</a>
+                    <a href="c5.html">Spoon</a>
+                    <a href="c6.html">Fork</a>
+                </div>
+            </div>
+             <a href="journal.html">About</a>
+             <font face="arial">
+                <label for="modal-toggle" class="open-modal">Log-in!</label> 
+                <input type="checkbox" id="modal-toggle" class="modal-toggle">
+          
+                <div class="modal">
+                  <div class="modal-content">
+                      <label for="modal-toggle" class="close">&times;</label>
+                      <center>
+                      <h2>Log-in Form</h2>
+                      </center>
+                      <form>
+                          <input type="text" id="username" required>
+                          <label for="username"><center>Username:</center></label>
+                          <input type="password" id="password" name="password" required>
+                          <label for="password"><center>Password:</center></label>
+                          <button type="submit">Log-in</button>
+                          <div class="login-link">
+                            <p> <a href="register.html">Register here!</a></p>
+                        </div>
+                      </form>
+                      
+            </div>
+            </div>
+        </div>
+        <div class="gallery">
+            <center>
+                <div class="gallery-container">
+                    <div class="gallery-image"><img src="OIP__6_-removebg-preview.png" alt="image 1"></div>
+                    <div class="gallery-image"><img src="8050e887e66bf79c08d83c433040f0c1-removebg-preview.png" alt="image 2"></div>
+                    <div class="gallery-image"><img src="Mie-Ceramics-Stoneware-Dinner-Plate-20190604172052.png" alt="image 3"></div>
+                    <div class="gallery-image"><img src="R__1_-removebg-preview.png" alt="image 4"></div>
+                </div>
+            </center>
+        </div>
+        
+        <div class="category">
+            <p>Scoop Laddle</p></div>
+       
+        <div class="thumbnail-gallery">
+            <div class="thumbnail"><a href="kproducts1.html"><img src="ip187222_00.jpg" alt="Thumbnail 1"></a>
+                <div class="description">Soup Laddle 1</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts2.html"><img src="R.jpg" alt="Thumbnail 2"></a>
+                <div class="description">Soup Laddle 2</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts3.html"><img src="KML1.jpg" alt="Thumbnail 3"></a>
+                <div class="description">Soup Laddle 3</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts4.html"><img src="OIP (3).jpg" alt="Thumbnail 4"></a>
+                <div class="description">Soup Laddle 4</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts5.html"><img src="OIP (2).jpg" alt="Thumbnail 5"></a>
+                <div class="description">Soup Laddle 5</div>
+            </div>
+        </div>
+
+        <div class="category">
+            <p>Frying Pan</p></div>
+        <div class="thumbnail-gallery">
+            <div class="thumbnail"><a href="kproducts6.html"><img src="1653220170915733267-800x800.jpg" alt="Thumbnail 6"></a>
+                <div class="description">Frying Pan 1</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts7.html"><img src="6798565_A.eps_High.jpg" alt="Thumbnail 7"></a>
+                <div class="description">Frying Pan 2</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts8.html"><img src="b7d3452d-6e54-449a-90c6-68dca69213ac.jpg" alt="Thumbnail 8"></a>
+                <div class="description">Frying Pan 3 (small)</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts9.html"><img src="26d1ea29-7c19-4b7a-8567-0f4e43d2e460.cd8da5c7994b206f87668639a51df403.webp" alt="Thumbnail 9"></a>
+                <div class="description">Frying Pan 4</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts10.html"><img src="OIP (4).jpg" alt="Thumbnail 10"></a>
+                <div class="description">Frying Pan 5</div>
+            </div>
+        </div>
+
+        <div class="category">
+            <p>Plate</p></div>
+        <div class="thumbnail-gallery">
+            <div class="thumbnail"><a href="kproducts11.html"><img src="51onXPFKC9L._AC_SS450_.jpg" alt="Thumbnail 11"></a>
+                <div class="description">Plate 1</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts12.html"><img src="813l680Hx-L._AC_SL1500_.jpg" alt="Thumbnail 12"></a>
+                <div class="description">Plate 2</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts13.html"><img src="f55ff92f66c78e1a27ada8d53a49df1f.jpg" alt="Thumbnail 13"></a>
+                <div class="description">Plate 3</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts14.html"><img src="71Y8wYVgyFL._AC_SL1500_.jpg" alt="Thumbnail 14"></a>
+                <div class="description">Plate 4</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts15.html"><img src="Mie-Ceramics-Stoneware-Dinner-Plate-20190604172052.jpg" alt="Thumbnail 15"></a>
+                <div class="description">Plate 5</div>
+            </div>
+        </div>
+
+        <div class="category">
+            <p>Bowl</p></div>
+        <div class="thumbnail-gallery">
+            <div class="thumbnail"><a href="kproducts16.html"><img src="OIP.jpg" alt="Thumbnail 16"></a>
+                <div class="description">Bowl 1</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts17.html"><img src="5dcad09e3560a8ae96fc000c80fbd46f.jpg" alt="Thumbnail 17"></a>
+                <div class="discription">Bowl 2</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts18.html"><img src="482107_1500x.jpg" alt="Thumbnail 18"></a>
+                <div class="description">Bowl 3</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts19.html"><img src="ccaa39a2-ba53-41d9-a1f1-1264542c3c23.eb2278d7b32b37c1ac1532fc5baff099.webp"alt="Thumbnail 19"></a>
+                <div class="description">Bowl 4</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts20.html"><img src="b04f9f97-2168-4e2a-8391-1c57ecea1acc_1.ae07238f4db9e78bdff0b6b5c51793d0.jpg"alt="Thumbnail 20"></a>
+                <div class="description">Bowl 5 </div>
+            </div>
+            </div>
+
+            <div class="category">
+                <p>Spoon</p></div>
+        <div class="thumbnail-gallery">
+            <div class="thumbnail"><a href="kproducts21.html"><img src="61JywWsk+XL._AC_SY300_SX300_.jpg" alt="Thumbnail 21"></a>
+                <div class="description">Spoon 1</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts22.html"><img src="OIP (6).jpg" alt="Thumbnail 22"></a>
+                <div class="description">Spoon 2</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts23.html"><img src="table-spoon.jpg" alt="Thumbnail 23"></a>
+                <div class="description">Spoon 3</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts24.html"><img src="golden-spoon-196-3d-model-3dm.jpg" alt="Thumbnail 24"></a>
+                <div class="description">Spoon 4</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts25.html"><img src="2271702.webp" alt="Thumbnail 25"></a>
+                <div class="description">Spoon 5</div>
+            </div>
+        </div>
+
+        <div class="category">
+            <p>Fork</p></div>
+        <div class="thumbnail-gallery">
+            <div class="thumbnail"><a href="kproducts26.html"><img src="51vX1PDym6L.__AC_SX300_SY300_QL70_FMwebp_.webp" alt="Thumbnail 26"></a>
+                <div class="description">Fork 1</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts27.html"><img src="61VwLlm04GL.__AC_SX300_SY300_QL70_FMwebp_.webp" alt="Thumbnail 27"></a>
+                <div class="description">Fork 2</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts28.html"><img src="61YU5zDY1AL.__AC_SX300_SY300_QL70_FMwebp_.webp" alt="Thumbnail 28"></a>
+                <div class="description">Fork 3</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts29.html"><img src="gold-fork-10-pcs.jpg" alt="Thumbnail 29"></a>
+                <div class="description">Fork 4</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts30.html"><img src="s-l640.jpg" alt="Thumbnail 30"></a>
+                <div class="description">Fork 5</div>
+            </div>
+            </div>
+            </div>
+            <div class="content"> </div>
+            <div class="footer">
+                <p>&copyCopyright 2024. All Rights Reserved.</p>
+            </div> 
+        </div>
+</body>
+
+</html>

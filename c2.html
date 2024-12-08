@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+		font-family:cursive;
+            margin:0px 0px 94px 0px;
+            padding: 0;
+			box-sizing: border-box;
+			background-image: url('1483382.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: background-image 0.5 ease;
+	}
+        
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            color: wheat;
+            text-align: center;
+            font-size: 1.5em;
+            font-style: italic;
+            text-shadow: 4px 4px 10px #852c03 ;
+            background-image: url('5cb86b8bdeb45d79294f005cb43be9a4_tn.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: background-image 0.5 ease;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+        .logo img{
+            max-width: 150px;
+            height:auto;
+            width: 250px; 
+              
+        }
+        .site-name{
+            margin:0;
+            flex-grow: 1;
+            text-align: center;
+            font-size: 12px;
+        }
+        .nav {
+            display: flex;
+            justify-content: left;
+            background-color: #e7bd8a;
+        }
+        .nav a {
+            color: #9e5002;
+            padding: 14px 10px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .nav a:hover {
+            background-color:  #b18c66;
+        }
+        .main {
+            padding: 20px;
+            text-align: center;
+            
+            
+        }
+       
+        .dropdown {
+    position: relative;
+   
+}
+
+
+        header {
+            color: #e4e4e4;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            color: white;
+            text-shadow:
+                0 0 10px rgb(250, 234, 215),
+                0 0 20px rgb(250, 234, 215),
+                0 0 40px rgb(250, 234, 215),
+                0 0 80px rgb(250, 234, 215);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #d87a21;
+            padding: 10px;
+
+        }
+
+        nav a {
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-shadow:
+                10px rgb(204, 101, 17),
+                20px rgb(204, 101, 17),
+                40px rgb(204, 101, 17),
+                80px rgb(204, 101, 17);
+
+        }
+
+        .gallery-image:nth-child(1) {
+            transform: rotateY(0deg);
+        }
+
+        .gallery-image:nth-child(2) {
+            transform: rotateY(90deg);
+        }
+
+        .gallery-image:nth-child(3) {
+            transform: rotateY(180deg);
+        }
+
+        .gallery-image:nth-child(4) {
+            transform: rotateY(270deg);
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .thumbnail-gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 70px;
+            margin-left: 50px;
+        }
+
+        .thumbnail {
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            width: 200px;
+            height: 205px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+
+        .description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+            font-size: 15px;
+            padding: 1px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .thumbnail:hover .description {
+            opacity: 1;
+
+        }
+		.product-name{
+            font-family: cursive;
+            font-size: 2em;
+            color: #e7bd8a;
+            text-shadow: 4px 4px 10px #9c3809;
+            justify-content: center;
+    
+        
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="Screenshot 2024-11-24 152846.png" alt="logo">
+                </div>
+            <h1>Lovely Kitchen</h1>
+            </div>
+        <div class="nav">
+            <a href="Products.html">Home</a>
+            <a href="my products.html">Products</a>
+        </div>
+        <center><div class="product-name">Frying Pan</div>
+        </center>
+        <div class="thumbnail-gallery">
+            <div class="thumbnail"><a href="kproducts6.html"><img src="1653220170915733267-800x800.jpg" alt="Thumbnail 6"></a>
+                <div class="description">Frying Pan 1</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts7.html"><img src="6798565_A.eps_High.jpg" alt="Thumbnail 7"></a>
+                <div class="description">Frying Pan 2</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts8.html"><img src="b7d3452d-6e54-449a-90c6-68dca69213ac.jpg" alt="Thumbnail 8"></a>
+                <div class="description">Frying Pan 3 (small)</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts9.html"><img src="26d1ea29-7c19-4b7a-8567-0f4e43d2e460.cd8da5c7994b206f87668639a51df403.webp" alt="Thumbnail 9"></a>
+                <div class="description">Frying Pan 4</div>
+            </div>
+            <div class="thumbnail"><a href="kproducts10.html"><img src="OIP (4).jpg" alt="Thumbnail 10"></a>
+                <div class="description">Frying Pan 5</div>
+            
+            </div>
+        </div>
