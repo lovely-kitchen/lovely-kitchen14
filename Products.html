@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Homepage</title>
+    <style>
+         body {
+            font-family:cursive;
+            margin: 0px 0px 0px 0px;
+            padding: 0;
+            background-color:#ac8553;
+            
+        }
+        .container {
+            background-image: url('1483382.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: background-image 0.5 ease;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 5px 5px;
+            color: wheat;
+            text-align: center;
+            font-size: 1.5em;
+            font-style: italic;
+            text-shadow: 4px 4px 10px #852c03 ;
+            background-image: url('nice-wood-kitchen_1048-4893.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: background-image 0.5 ease;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+        .logo img{
+            max-width: 150px;
+            height:auto;
+            width: 200px; 
+              
+        }
+        .site-name{
+            margin:0;
+            flex-grow: 1;
+            text-align: center;
+            font-size: 12px;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #e7bd8a;
+        }
+        .nav a {
+            color: #9e5002;
+            padding: 14px 15px;
+            text-decoration: none;
+            text-align: center;
+           
+        }
+        .nav a:hover {
+            background-color:  #b18c66;
+        }
+        .main {
+            padding: 20px;
+            text-align: center;
+            
+            
+        }
+.dropdown-btn {
+    background-color: #e7bd8a;
+    color: #9e5002;
+    font-family: cursive;
+    padding: 14px 20px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.dropdown-btn:hover {
+    background-color: #b18c66;
+}
+
+
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: #e7bd8a;
+    min-width: 100px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #9e5002;
+    padding: 5px 28px;
+    text-decoration: none;
+    display: block;
+    font-size: 11.5px;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background-color: #e7a562;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+    .info{
+        padding: 130px;
+        margin-top: 60px;
+        font-style: italic;
+        color: #e2a971;
+        text-align: center;
+        text-shadow: 4px 4px 10px #852c03 ;
+      
+    }
+    .info2 {
+        display: flex;
+        text-align: justify;
+        font-weight: bold;
+        color: wheat;
+        letter-spacing: 2px;
+        font-size: 17px;
+        border-radius: 5px;
+        margin-top:50px;
+        margin-bottom: 70px;
+        font-style: cursive;
+        flex-wrap: nowrap;
+        text-shadow: 4px 4px 10px #852c03 ;
+    }
+    .info h2{
+        font-size: 35px;
+        margin: 0 0 5px 0;
+        
+    }
+
+    .footer {
+        background-image: url('nice-wood-kitchen_1048-4893.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: background-image 0.5 ease;
+        color: wheat;
+        font-size: 20px;
+        text-shadow: 4px 4px 10px #852c03 ;
+        text-align: center;
+        padding: 10px 0px;
+        position: relative;
+        width: 100%;
+        bottom: 0;
+           
+            
+        }
+ 
+        
+        #outerbox {
+            width: 450px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 30px 80px 20px 50px;
+            float: right;
+
+        }
+
+        #sliderbox {
+            position: relative;
+            display: flex;
+            width: 4500px;
+            height: 450px;
+            animation: slider 15s infinite;
+        }
+        #sliderbox img {
+            width: 450px;
+            height: 450px;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .open-modal{
+        padding: 15px 13px;
+        background-color: #e7bd8a;
+        color: #9e5002;
+        text-align: center;
+        cursor: pointer;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 4px;
+        
+    }
+    .open-modal:hover{
+        background-color: #b18c66;
+    }
+    .modal{
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .modal-toggle{
+display: none;
+    }
+    .modal-toggle:checked+.modal{
+        display: block;
+    }
+    .modal-content{
+        background-color: #fefefe;
+        margin: 8% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 300px;
+        border-radius: 5px;
+        position: relative;
+    }
+    .close{
+        color:#aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .close:hover{
+        color: black;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    label{
+        margin: 10px 0 5px;
+    }
+    input[type="text"],
+    input[type="password"]{
+        padding:10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+
+    }
+    button[type="submit"]{
+        background-color: #28a745;
+        border: none;
+        padding: 10px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button[type="submit"]:hover{
+        background-color: #218838;
+    }
+    .login-link {
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        .login-link a {
+            color: #0b0b0c;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+        @keyframes slider {
+
+            0%,
+            10% {
+                left: 0;
+            }
+
+            12.5%,
+            22.5% {
+                left: -450px;
+            }
+
+            25%,
+            35% {
+                left: -900px;
+            }
+
+            37.5%,
+            47.5% {
+                left: -1350px;
+            }
+
+            50%,
+            60% {
+                left: -1800px;
+            }
+
+            62.5%,
+            72.5% {
+                left: -2250px;
+            }
+
+            75%,
+            85% {
+                left: -2700px;
+            }
+
+            87.5%,
+            97.5% {
+                left: -3150px;
+            }
+
+            100% {
+                left: -3600px;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="header">
+        <div class="logo">
+            <img src="Screenshot 2024-11-24 152846.png" alt="logo">
+            </div>
+        <h1>Lovely Kitchen</h1>
+        </div>
+    <div class="nav">
+        <a href="Products.html">Home</a>
+        <a href="my products.html">Products</a>
+        <div class="dropdown">
+            <button class="dropdown-btn">Categories</button>
+            <div class="dropdown-content">
+                <a href="c1.html">Scoop Ladle</a>
+                <a href="c2.html">Frying Pan</a>
+                <a href="c3.html">Plate</a>
+                <a href="c4.html">Bowl</a>
+                <a href="c5.html">Spoon</a>
+                <a href="c6.html">Fork</a>
+            </div>
+        </div>
+        <a href="journal.html">About</a>
+        <font face="arial">
+            <label for="modal-toggle" class="open-modal">Log-in!</label> 
+            <input type="checkbox" id="modal-toggle" class="modal-toggle">
+      
+            <div class="modal">
+              <div class="modal-content">
+                  <label for="modal-toggle" class="close">&times;</label>
+                  <center>
+                  <h2>Log-in Form</h2>
+                  </center>
+                  <form>
+                      <input type="text" id="username" required>
+                      <label for="username"><center>Username:</center></label>
+                      <input type="password" id="password" name="password" required>
+                      <label for="password"><center>Password:</center></label>
+                      <button type="submit">Log-in</button>
+                      <div class="login-link">
+                        <p> <a href="register.html">Register here!</a></p>
+                    </div>
+                  </form>
+                  
+        </div>
+        </div>
+    </div>
+    <div id="outerbox">
+        <div id="sliderbox">
+            <img src="ip187222_00.png"height="500px"width="800px">
+            <img src="KML1.png" height="500px"width="800px">
+            <img src="OIP (2).png"height="500px"width="800px">
+            <img src="R.png"height="500px"width="800px">
+            <img src="51onXPFKC9L._AC_SS450_.png"height="500px"width="800px">
+            <img src="f55ff92f66c78e1a27ada8d53a49df1f.png"height="500px"width="800px">
+            <img src="Mie-Ceramics-Stoneware-Dinner-Plate-20190604172052.png"height="500px"width="800px">
+            <img src="11550fd0-a425-40c6-9d96-7505df5e781f.6c3cd425e2b12bbbc45196d390a334cf.png"height="500px"width="800px">
+            <img src="Mie-Ceramics-Stoneware-Dinner-Plate-20190604172052.png"height="500px"width="800px">
+            <img src="b7d3452d-6e54-449a-90c6-68dca69213ac.png"height="500px"width="800px">
+        </div>
+    </div>
+    <div class="info">
+        <h2>WELCOME TO LOVELY KITCHEN!</h2>
+        <div class="info2"
+        <p>Make cooking easier with our durable kitchen utensils. Made from high-quality materials like stainless steel and silicone, these tools are built to last 
+            with comfortable handles and easy-to-use designs, they’re perfect for everyday cooking. Plus, they're dishwasher-safe for quick cleanup,
+            stylish and practical, these utensils are a great addition to any kitchen. Cook with ease and enjoy every meal!</p>
+       
+    </div>
+    </div>
+</main>
+    <div class="content"> </div>
+    <div class="footer">
+        <p>&copyCopyright 2024. All Rights Reserved.</p>
+    </div> 
+</div>
+  </body>
+</html>
