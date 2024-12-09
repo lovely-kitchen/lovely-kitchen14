@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<style>
+    body{
+        font-family: cursive;
+        margin: 0;
+        padding: 0;
+        color: #9e5002;
+        scroll-behavior: smooth;
+    }
+    header{
+        background:rgb(176,176,176,1.00) ;
+        background-image: url('nice-wood-kitchen_1048-4893.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: background-image 0.5 ease;
+        color:#dbd1cb;
+        text-align: center;
+        text-shadow: 4px 4px 10px #852c03 ;
+        padding: 2px 20px 5px 0px;
+        position: relative;
+        overflow: hidden;
+        font-style: italic;
+    }
+    header .hero h1 span{
+        font-size: 40px;
+        color: #e9a45e;
+        font-style: italic;
+        text-shadow: 4px 4px 10px #852c03 ;
+
+    }
+    header .hero p{
+        font-size:23px;
+    }
+    header .btn{
+        display: inline-block;
+        margin-top: 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 10px 25px;
+        background:#e9a45e;
+        color:#9e5002;
+        text-decoration: none;
+        font-weight: bold;
+        text-shadow: 4px 4px 10px #852c03 ;
+        border-radius: 5px;
+        transition: background 0.3s ease,transform 0.3s ease;
+    }
+    header .btn:hover{
+        
+        color:white;
+        transform: scale(1.1);
+    }
+
+    header .btn:hover{
+        background-color:#9e5002;
+    }
+    .btn{
+        font-family:cursive;
+    }
+
+
+    
+    nav ul{
+        list-style: none;
+        margin: 0;
+        padding: 1px 15px;
+        display: flex;
+        justify-content: center;
+        background: #e7bd8a;
+    }
+    nav ul li{
+        margin:10px 15px;
+       
+        
+    }
+    nav ul li a{
+        color: #9e5002;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: color o.3s ease;
+        font-size: 18px;
+    }
+    nav ul li a:hover{
+        color: #552c04;
+        
+    }
+    .section{
+        padding: 50px 20px;
+        text-align: center;
+        background-image: url('1483382.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: background-image 0.5 ease;
+        margin: 20px 0;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: slidein 1s ease-in-out forwards;
+    }
+    .projects{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+    .projects h3{
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+
+    }
+    h2{
+        color: rgb(255, 255, 255);
+        text-shadow: 4px 4px 10px #852c03 ;
+    }
+    p{
+        color: rgb(247, 243, 243);
+        font-size: 19px;
+        text-shadow: 4px 4px 10px #852c03 ;
+    }
+    .project-card{
+        background: #e9a45e;
+        color: #9e5002;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px  rgb(0,0,0,0.1);
+        transition: transform 0.9 ease,box-shadow 0.6s ease;
+        width: 300px;
+    }
+    .hero a{
+        color:white;
+    }
+   
+    .project-card:hover{
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgb(0,0,0,0.2);
+    }
+    .dropdown-btn {
+    background-color: #e7bd8a;
+    color: #9e5002;
+    font-family: cursive;
+    text-align: center;
+    padding: 11px 15px;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    
+}
+
+.dropdown-btn:hover {
+    background-color: #b18c66;
+}
+
+
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    background-color: #e7bd8a;
+    min-width: 100px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #9e5002;
+    padding: 5px 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 12.5px;
+    white-space: nowrap;
+    text-align: centers;
+}
+
+.dropdown-content a:hover {
+    background-color: #e7a562;
+    max-width: 100%;
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+    @keyframes fadein{
+        from{
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes slidein{
+        from{
+            opaity:0;
+            transform: translateY(30px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .thumbnail-gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+            margin-left: 50px;
+            
+        }
+
+        .thumbnail {
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            width: 200px;
+            height: 205px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            display: block;
+
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+
+    footer{
+        background-image: url('nice-wood-kitchen_1048-4893.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: background-image 0.5 ease;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        text-shadow: 4px 4px 10px #f3a27d ;
+    }
+    @media(max-width:768px){
+        .projects{
+            flex-direction: column;
+            align-items: center;
+        }
+        .project-card{
+        width: 90%;
+    }
+    }
+    .section slide-in p{
+        font-size: 15px;
+        
+    }
+</style>
+<body>
+    <header>
+
+        <div class="hero">
+            <h1 class="fade-in">Welcome to<span>&nbsp;Lovely Kitchen!</span></h1>
+        </div>
+    </header>
+    <nav>
+       <ul>
+        <li><a href="Products.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+       </ul>
+    </nav>
+    <section id="about" class="section slide-in">
+        <h2>About Us</h2> 
+        <p>Welcome to Lovely Kitchen, we believe that the right kitchen tools can transform the way you cook and inspire creativity in the kitchen. That's why we source only the best materials and offer a wide range of carefully selected items to meet every need. With our easy-to-navigate website, secure payment options, and fast shipping, shopping for your kitchen essentials has never been easier. We are committed to offering exceptional customer service and ensuring you find everything you need to make your kitchen a place of culinary delight.</p>
+    </section>
+    <section id="mission" class="section slide-in">
+        <h2>Mission</h2>
+        <p> Our mission is to provide high-quality kitchen utensils that make cooking easier and more enjoyable. We offer a wide selection of reliable and affordable tools designed to help you cook with confidence. Our goal is to provide excellent service and the best products to make your time in the kitchen more fun and efficient.</p>
+    </section>
+    <section id="products" class="section slide-in">
+        <div class="thumbnail-gallery">
+            <div class="thumbnail"><img src="6798565_A.eps_High.png" alt="Thumbnail 1">
+                <div class="description">Soup Laddle 1</div>
+            </div>
+            <div class="thumbnail"><img src="OIP (4).png" alt="Thumbnail 2">
+                <div class="description">Soup Laddle 2</div>
+            </div>
+            <div class="thumbnail"><img src="OIP (2).png" alt="Thumbnail 3">
+                <div class="description">Soup Laddle 3</div>
+            </div>
+            <div class="thumbnail"><img src="Mie-Ceramics-Stoneware-Dinner-Plate-20190604172052.png" alt="Thumbnail 4">
+                <div class="description">Soup Laddle 4</div>
+            </div>
+            <div class="thumbnail"><img src="f55ff92f66c78e1a27ada8d53a49df1f.png" alt="Thumbnail 5">
+                <div class="description">Soup Laddle 5</div>
+            </div>
+        </div>
+        </section>
+        <section id="projects" class="section slide-in">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project-card hover-grow">
+                    <p>Customers can shop for kitchen utensils from the comfort of their homes, saving time and effort compared to visiting physical stores. An online platform provides 24/7 shopping convenience.</p>
+                </div>
+                <div class="project-card hover-grow">
+                    <p>This websites allow customers to leave reviews and ratings on my products. Positive reviews can build trust with new customers and help improve product quality based on feedback.</p>
+                </div>
+                <div class="project-card hover-grow">
+                    <p>Ensure that your kitchen utensils are packaged securely and attractively. Good packaging not only protects products during transit but also adds to the overall experience, especially for gift-worthy items.</p>
+                </div> 
+            </div>
+        </section>
+    
+    <section id="contact" class="section slide-in">
+        <h2>Contact Us</h2>
+        <p>If you have any concerns, our team is ready to help and provide solutions.</p>
+        <p>Contact us on:</p>
+        <p>Email:lovelykitchen.utensils14@gmail.com</p>
+        <p>Phone:+63 9810 180 414</p>
+    </section>
+    <footer>
+        <p>&copyCopyright 2024. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
