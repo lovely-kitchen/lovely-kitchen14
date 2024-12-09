@@ -205,7 +205,36 @@
             transform: translateY(0);
         }
     }
-    
+    .thumbnail-gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+            margin-left: 50px;
+            
+        }
+
+        .thumbnail {
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            width: 200px;
+            height: 205px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            display: block;
+
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+
     footer{
         background-image: url('nice-wood-kitchen_1048-4893.jpg');
         background-size: cover;
@@ -234,8 +263,8 @@
     <header>
 
         <div class="hero">
-            <h1 class="fade-in">Hello, I'm<span>&nbsp;Alyza!</span></h1>
-            <p class="fade-in">I'm constantly learning, evolving, and adapting — because in web development, there's always something new to master.</p>
+            <h1 class="fade-in">Welcome to<span>&nbsp;Lovely Kitchen!</span></h1>
+            <p class="fade-in">Cooking is made simple and enjoyable with the right tools, and we're here to provide them.</p>
             <a href="about.html" class="btn">Discover More</a>
         </div>
     </header>
@@ -248,31 +277,53 @@
        </ul>
     </nav>
     <section id="about" class="section slide-in">
-        <h2>About Me</h2> 
-        <p>I am a curious soul who loves learning new things every day. My mind is constantly seeking knowledge, and I thrive in environments that challenge me. Life is an ongoing journey, and I'm excited to see where it takes me.
-    I am someone who is always eager to learn and grow, finding inspiration in the world around me. I value honesty, kindness, and meaningful connections with others, believing that they are the foundation of any strong relationship. I thrive in environments that challenge me and push me outside of my comfort zone, constantly seeking opportunities to evolve. While I’m passionate about my goals, I also make time to appreciate the small moments and find joy in everyday life. At the end of the day, I strive to live with purpose, authenticity, and a heart full of gratitude.</p></section>
+        <h2>About Us</h2> 
+        <p>Welcome to Lovely Kitchen, we believe that the right kitchen tools can transform the way you cook and inspire creativity in the kitchen. That's why we source only the best materials and offer a wide range of carefully selected items to meet every need. With our easy-to-navigate website, secure payment options, and fast shipping, shopping for your kitchen essentials has never been easier. We are committed to offering exceptional customer service and ensuring you find everything you need to make your kitchen a place of culinary delight.</p>
+    </section>
     <section id="mission" class="section slide-in">
         <h2>Mission</h2>
         <p> Our mission is to provide high-quality kitchen utensils that make cooking easier and more enjoyable. We offer a wide selection of reliable and affordable tools designed to help you cook with confidence. Our goal is to provide excellent service and the best products to make your time in the kitchen more fun and efficient.</p>
     </section>
+    <section id="products" class="section slide-in">
+        <div class="thumbnail-gallery">
+            <div class="thumbnail"><img src="6798565_A.eps_High.png" alt="Thumbnail 1">
+                <div class="description">Soup Laddle 1</div>
+            </div>
+            <div class="thumbnail"><img src="OIP (4).png" alt="Thumbnail 2">
+                <div class="description">Soup Laddle 2</div>
+            </div>
+            <div class="thumbnail"><img src="OIP (2).png" alt="Thumbnail 3">
+                <div class="description">Soup Laddle 3</div>
+            </div>
+            <div class="thumbnail"><img src="Mie-Ceramics-Stoneware-Dinner-Plate-20190604172052.png" alt="Thumbnail 4">
+                <div class="description">Soup Laddle 4</div>
+            </div>
+            <div class="thumbnail"><img src="f55ff92f66c78e1a27ada8d53a49df1f.png" alt="Thumbnail 5">
+                <div class="description">Soup Laddle 5</div>
+            </div>
+        </div>
+        </section>
         <section id="projects" class="section slide-in">
-            <h2>My Hobbies</h2>
+            <h2>Projects</h2>
             <div class="projects">
                 <div class="project-card hover-grow">
-                    <p>I get so much joy from experimenting with different ingredients and flavors. It’s like creating art, but you get to eat the masterpiece! Cooking also allows me to share love and warmth with family and friends through food. </div>
+                    <p>Customers can shop for kitchen utensils from the comfort of their homes, saving time and effort compared to visiting physical stores. An online platform provides 24/7 shopping convenience.</p>
+                </div>
                 <div class="project-card hover-grow">
-                    <p>I enjoy working on home improvement projects and crafting my own solutions. Whether it’s building a shelf, repainting furniture, or creating décor, DIY projects allow me to be creative and resourceful. The satisfaction of completing a project is always worth the effort.</div>
+                    <p>This websites allow customers to leave reviews and ratings on my products. Positive reviews can build trust with new customers and help improve product quality based on feedback.</p>
+                </div>
                 <div class="project-card hover-grow">
-                    <p> I often find myself trying to empathize with others, even when they don’t treat me well. I try to see their struggles and reasons behind their actions, believing that understanding them might lead to a resolution. But sometimes, I realize that this mindset can leave me vulnerable, and while I want to be kind and patient, I also need to set boundaries to protect my own well-being.</div> 
+                    <p>Ensure that your kitchen utensils are packaged securely and attractively. Good packaging not only protects products during transit but also adds to the overall experience, especially for gift-worthy items.</p>
+                </div> 
             </div>
         </section>
     
     <section id="contact" class="section slide-in">
-        <h2>Contact Me</h2>
+        <h2>Contact Us</h2>
         <p>If you have any concerns, our team is ready to help and provide solutions.</p>
-        <p>Contact me on:</p>
-        <p>Email:alyza.taracatac014@gmail.com</p>
-        <p>Phone:+63 9169 418 093</p>
+        <p>Contact us on:</p>
+        <p>Email:lovelykitchen.utensils14@gmail.com</p>
+        <p>Phone:+63 9810 180 414</p>
     </section>
     <footer>
         <p>&copyCopyright 2024. All Rights Reserved.</p>
